@@ -10,6 +10,9 @@ import { AllProductsComponent } from './components/all-products/all-products.com
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    AllProductsComponent
   ]
 })
 export class ProductsModule { }
