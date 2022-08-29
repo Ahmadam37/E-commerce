@@ -13,5 +13,9 @@ export class ProductService {
   getAllProducts(){
    return this.http.get( environment.baseAPI+'products');
   }
+
+  getAllCategories(){
+    return this.http.get(environment.baseAPI+'products/categories')
+  }
 }
 

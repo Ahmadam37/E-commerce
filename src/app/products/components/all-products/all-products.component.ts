@@ -10,10 +10,12 @@ export class AllProductsComponent implements OnInit {
 
 
   products:any [] = [];
+  Categories:any []= [];
   constructor(private service:ProductService) { }
 
   ngOnInit(): void {
   this.getProduct()
+  this.getCategories()
   }
 
 
@@ -22,6 +24,14 @@ export class AllProductsComponent implements OnInit {
       this.products = res
     }, err => {
       alert(err.message)
+    })
+  }
+
+
+  getCategories(){
+    this.service.getAllCategories().subscribe((res:any) => {
+      this.Categories = res;
+      console.log(res)
     })
   }
 
