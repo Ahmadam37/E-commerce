@@ -37,4 +37,14 @@ export class AllProductsComponent implements OnInit {
     })
   }
 
+  getFilter(event:any){
+    let value = event.target.value;
+    this.getFilterCategories(value)
+  }
+
+  getFilterCategories(keyword:string){
+    this.service.getSpecificCategories(keyword).subscribe((res:any) =>{
+      this.products = res;
+    })
+  }
 }

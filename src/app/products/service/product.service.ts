@@ -17,5 +17,9 @@ export class ProductService {
   getAllCategories(){
     return this.http.get(environment.baseAPI+'products/categories')
   }
+
+  getSpecificCategories(keyword:string){
+    return this.http.get(environment.baseAPI+'products/category/'+keyword)
+  }
 }
 
