@@ -20,6 +20,8 @@ export class AllProductsComponent implements OnInit {
   getProduct(){
     this.service.getAllProducts().subscribe((res:any) => {
       this.products = res
+    }, err => {
+      alert(err.message)
     })
   }
 
