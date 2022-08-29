@@ -32,6 +32,8 @@ export class AllProductsComponent implements OnInit {
     this.service.getAllCategories().subscribe((res:any) => {
       this.Categories = res;
       console.log(res)
+    }, err => {
+      alert(err.message)
     })
   }
 
