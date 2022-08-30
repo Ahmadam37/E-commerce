@@ -45,6 +45,8 @@ export class AllProductsComponent implements OnInit {
   getFilterCategories(keyword:string){
     this.service.getSpecificCategories(keyword).subscribe((res:any) =>{
       this.products = res;
+    }, err => {
+      alert(err.message);
     })
   }
 }
