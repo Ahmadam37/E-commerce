@@ -6,7 +6,7 @@
     <option value="{{category}}"  *ngFor="let category of Categories">{{category}}</option>
   </select>
 </div>
-  <div class="row">
+  <div class="row" *ngIf="!loading">
     <div class="col-md-3 col-sm-12" *ngFor="let item of products">
       <div class="card">
         <img
@@ -27,5 +27,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="text-center w-100" *ngIf="loading">
+    <app-spinner></app-spinner>
   </div>
 </div>

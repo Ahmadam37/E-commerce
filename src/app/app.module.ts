@@ -18,7 +18,7 @@ import { ProductsModule } from './products/products.module';
   RouterModule,
     BrowserModule,
     SharedModule,
-    ProductsModule
+    ProductsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

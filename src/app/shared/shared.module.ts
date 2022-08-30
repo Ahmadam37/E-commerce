@@ -22,7 +22,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     RouterModule
   ],
   exports : [
-    NavbarComponent
+    NavbarComponent,
+    SpinnerComponent
   ]
 })
 export class SharedModule { }
