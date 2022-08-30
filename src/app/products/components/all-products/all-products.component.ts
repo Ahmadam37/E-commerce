@@ -39,11 +39,7 @@ export class AllProductsComponent implements OnInit {
 
   getFilter(event:any){
     let value = event.target.value;
-    if(value == 'all'){
-      this.getProduct()
-    }else{
-      this.getFilterCategories(value)
-    }
+    (value == 'all') ? this.getProduct() : this.getFilterCategories(value);
 
   }
 
