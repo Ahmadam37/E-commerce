@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SelectComponent } from './components/select/select.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SelectorComponent } from './components/selector/selector.component';
 
 
 
@@ -13,7 +14,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
   declarations: [
     NavbarComponent,
     SelectComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SelectorComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
   ],
   exports : [
     NavbarComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SelectorComponent
   ]
 })
 export class SharedModule { }

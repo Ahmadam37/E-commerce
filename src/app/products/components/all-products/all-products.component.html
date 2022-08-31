@@ -1,28 +1,20 @@
 <div class="box mx-auto mt-4">
   <div class="my-2 w-25">
-    <div class="my-1">Categories :</div>
-  <select class="form-control" (change)="getFilter($event)">
-    <option value="all" selected>ALL</option>
-    <option value="{{category}}"  *ngFor="let category of Categories">{{category}}</option>
-  </select>
-</div>
+    <app-selector [data]="Categories" [title]="'Categories'" (selectedValue)="getFilter($event)"></app-selector>
+  </div>
   <div class="row" *ngIf="!loading">
     <div class="col-md-3 col-sm-12" *ngFor="let item of products">
       <div class="card">
-        <img
-          src="{{item.image}}"
-          class="card-img-top"
-          alt="..."
-        />
+        <img src="{{ item.image }}" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">{{item.title}}</h5>
+          <h5 class="card-title">{{ item.title }}</h5>
           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
           <p class="card-text">
-            {{item.description}}
+            {{ item.description }}
           </p>
           <div class="card-footer">
             <a href="#" class="btn"><i class="fas fa-link"></i> Add to Cart</a>
-            <span>{{item.price}} SAR</span>
+            <span>{{ item.price }} SAR</span>
           </div>
         </div>
       </div>
