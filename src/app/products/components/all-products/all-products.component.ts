@@ -58,4 +58,8 @@ export class AllProductsComponent implements OnInit {
       alert(err.messsage);
     })
   }
+
+  addToCart(event:any){
+    console.log(event);
+  }
 }
