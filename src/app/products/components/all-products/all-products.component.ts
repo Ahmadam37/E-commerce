@@ -63,11 +63,16 @@ export class AllProductsComponent implements OnInit {
   addToCart(event:any){
     if("cart" in localStorage){
       this.cartProduct = JSON.parse(localStorage.getItem("cart")!);
-      this.cartProduct.push(event);
-      localStorage.setItem("cart" ,JSON.stringify(this.cartProduct));
+      let exist = this.cartProduct.find(item => item.id == event.id);
+      if(exist){
+        alert("The item already exist in your cart");
+      }else{
+        this.cartProduct.push(event);
+        localStorage.setItem("cart" ,JSON.stringify(this.cartProduct)); //This means update the localStorage
+      }
     }else{
       this.cartProduct.push(event);
-      localStorage.setItem("cart" , JSON.stringify(this.cartProduct));
+      localStorage.setItem("cart" , JSON.stringify(this.cartProduct)); //This means update the localStorage
     }
   }
 }
