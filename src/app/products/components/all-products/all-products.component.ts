@@ -12,6 +12,7 @@ export class AllProductsComponent implements OnInit {
   products:any [] = [];
   Categories:any []= [];
   loading:boolean = false;
+  cartProduct: any [] = [];
   constructor(private service:ProductService) { }
 
   ngOnInit(): void {
@@ -60,6 +61,13 @@ export class AllProductsComponent implements OnInit {
   }
 
   addToCart(event:any){
-    console.log(event);
+    if("cart" in localStorage){
+      this.cartProduct = JSON.parse(localStorage.getItem("cart")!);
+      this.cartProduct.push(event);
+      localStorage.setItem("cart" ,JSON.stringify(this.cartProduct));
+    }else{
+      this.cartProduct.push(event);
+      localStorage.setItem("cart" , JSON.stringify(this.cartProduct));
+    }
   }
 }
