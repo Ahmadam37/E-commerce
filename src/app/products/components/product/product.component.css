@@ -52,6 +52,10 @@ p{
   text-align: center;
   margin: 5px;
 }
+.newBtn {
+  width: 100%;
+  display: flex;
+}
 span{
   background: linear-gradient(#DD2476 10%, #FF512F 90%) !important;;
   padding: 10px 20px;

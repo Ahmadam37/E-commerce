@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SelectComponent } from './components/select/select.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SelectorComponent } from './components/selector/selector.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -21,12 +22,14 @@ import { SelectorComponent } from './components/selector/selector.component';
     CommonModule,
     HttpClientModule,
     BrowserModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports : [
     NavbarComponent,
     SpinnerComponent,
-    SelectorComponent
+    SelectorComponent,
+    FormsModule
   ]
 })
 export class SharedModule { }
