@@ -1,1 +1,22 @@
-<p>products-details works!</p>
+<div class="cardroot">
+  <div class="row" *ngIf="!loading">
+    <div class="col-md-5 col-sm-12 card">
+      <img src="{{data.image}}">
+    </div>
+    <div class="col-md-7 col-sm-12">
+      <div class="info">
+        <ul>
+          <li style="color: #fff;"><strong>Title:</strong>{{data.title}}</li>
+          <li style="color: #fff;"><strong>Category:</strong>{{data.category}}</li>
+          <li style="color: #fff;"><strong></strong>{{data.description}}</li>
+          <li style="color: #fff;"><strong></strong>{{data.rating.rate}}</li>
+          <li style="color: #fff;"><strong></strong>{{data.rating.count}}</li>
+          <li style="color: #fff;"><strong></strong>{{data.price}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <app-spinner *ngIf="loading"></app-spinner>
+  </div>
+  </div>

@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductComponent } from './components/product/product.component';
+import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 
 
 
 @NgModule({
   declarations: [
     AllProductsComponent,
-    ProductComponent
+    ProductComponent,
+    ProductsDetailsComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
   ],
   exports:[
     AllProductsComponent

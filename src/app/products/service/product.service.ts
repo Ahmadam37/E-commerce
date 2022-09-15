@@ -21,5 +21,9 @@ export class ProductService {
   getSpecificCategories(keyword:string){
     return this.http.get(environment.baseAPI+'products/category/'+keyword)
   }
+
+  getProductById(id:any){
+    return this.http.get(environment.baseAPI+'products/'+id);
+  }
 }
 
