@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AllProductsComponent } from './components/all-products/all-products.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -15,10 +16,13 @@ import { ProductsDetailsComponent } from './components/products-details/products
   ],
   imports: [
     CommonModule,
-    SharedModule,
+    BrowserModule,
+    SharedModule
   ],
   exports:[
-    AllProductsComponent
+    AllProductsComponent,
+    ProductComponent,
+    ProductsDetailsComponent
   ]
 })
 export class ProductsModule { }

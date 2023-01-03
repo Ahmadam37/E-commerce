@@ -1,6 +1,7 @@
 import { ProductService } from './../../service/product.service';
 import { Component, OnInit } from '@angular/core';
 import { SpinnerComponent } from 'src/app/shared/components/spinner/spinner.component';
+import { Product } from '../../models/product';
 @Component({
   selector: 'app-all-products',
   templateUrl: './all-products.component.html',
@@ -9,8 +10,8 @@ import { SpinnerComponent } from 'src/app/shared/components/spinner/spinner.comp
 export class AllProductsComponent implements OnInit {
 
 
-  products:any [] = [];
-  Categories:any []= [];
+  products:Product[] = [];
+  Categories:string []= [];
   loading:boolean = false;
   cartProduct: any [] = [];
   constructor(private service:ProductService) { }

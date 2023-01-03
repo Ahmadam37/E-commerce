@@ -1,18 +1,19 @@
 <div class="card">
-  <img src="{{ data.image }}" class="card-img-top" alt="..." />
+  <div routerLink="/details/{{data.id}}">
+  <img src="{{ data.image }}" alt="" />
   <div class="card-body">
     <h5 class="card-title">{{ data.title }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text">
       {{ data.description }}
     </p>
+  </div>
+  </div>
     <div class="card-footer">
-      <button class="btn" *ngIf="!addButton" (click)="addButton = true">Add to Cart</button>
+      <button class="btn btn-success" *ngIf="!addButton" (click)="addButton = true">Add to Cart</button>
       <div class="newBtn" *ngIf="addButton">
-      <input type="number" class="form-control btnInput" [(ngModel)]="amount">
-      <button class="btn btn-danger" (click)="add()">ADD</button>
+      <input type="number" class="form-control btnInput" [(ngModel)]="amount" min="1">
+      <button class="btn btn-danger" (click)="add();addButton = false">ADD</button>
     </div>
       <span>{{ data.price }} SAR</span>
     </div>
   </div>
-</div>
