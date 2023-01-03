@@ -1,0 +1,21 @@
+@media (min-width: 1025px) {
+  .h-custom {
+  height: 100vh !important;
+  }
+  }
+.h-custom{
+  margin-top: 50px;
+}
+th{
+  color: white;
+}
+p{
+  color: white;
+}
+.quantity{
+  display: flex;
+  justify-content: space-between;
+}
+input{
+  margin: 0 20px;
+}
